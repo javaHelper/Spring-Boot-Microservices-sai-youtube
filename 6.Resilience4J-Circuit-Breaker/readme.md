@@ -237,3 +237,29 @@ GET -> `http://localhost:60008/actuator/retryevents`
 }
 ```
 
+GET -> `http://localhost:60008/actuator/timelimiterevents`
+
+Response:
+
+```json
+{
+    "timeLimiterEvents": [
+        {
+            "timeLimiterName": "inventory",
+            "type": "TIMEOUT",
+            "creationTime": "2022-06-11T00:02:36.320120+05:30[Asia/Kolkata]"
+        },
+        {
+            "timeLimiterName": "inventory",
+            "type": "TIMEOUT",
+            "creationTime": "2022-06-11T00:02:44.358453+05:30[Asia/Kolkata]"
+        },
+        {
+            "timeLimiterName": "inventory",
+            "type": "TIMEOUT",
+            "creationTime": "2022-06-11T00:02:52.372326+05:30[Asia/Kolkata]"
+        }
+    ]
+}
+```
+
