@@ -28,7 +28,7 @@ public class OrderService {
 	private OrderRepository orderRepository;
 
 	@Autowired
-	private WebClient.Builder webClient;
+	private WebClient.Builder webClientBuilder;
 
 
 	public void placeOrder(OrderRequest orderRequest) {
@@ -49,8 +49,9 @@ public class OrderService {
 				.collect(Collectors.toList());
 
 		// Call Inventory Service, and place order if product is in stock
-		boolean allProductsInStock = webClient.build().get()
-				.uri("http://inventory-service/api/inventory", uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
+		boolean allProductsInStock = webClientBuilder.build()
+				.get()
+				.uri(INVENTORY_SERVICE_URI, uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
 				.retrieve()
 				.bodyToMono(InventoryResponse[].class)
 				.map(e -> Arrays.stream(e))
