@@ -17,3 +17,9 @@
 # Zipkin
 
 `http://localhost:9411/`
+
+<img width="1311" alt="Screenshot 2022-06-11 at 11 39 37 AM" src="https://user-images.githubusercontent.com/54174687/173175721-37c219ae-6eb4-4d0b-9818-282d513ca7c3.png">
+<img width="1512" alt="Screenshot 2022-06-11 at 11 39 51 AM" src="https://user-images.githubusercontent.com/54174687/173175718-7a9d8680-095a-4a38-90cd-5cd0096e1c67.png">
+<img width="1511" alt="Screenshot 2022-06-11 at 11 40 10 AM" src="https://user-images.githubusercontent.com/54174687/173175715-e1409ff8-c55d-4915-8eef-b62e9defdc08.png">
+
+
