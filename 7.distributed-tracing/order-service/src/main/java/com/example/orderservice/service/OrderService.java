@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -18,11 +20,11 @@ import com.example.orderservice.repository.OrderRepository;
 
 import brave.Span;
 import brave.Tracer;
-import brave.Tracer.SpanInScope;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
+@Transactional
 public class OrderService {
 
 	private static final String INVENTORY_SERVICE_URI = "http://inventory-service/api/inventory";
@@ -33,6 +35,7 @@ public class OrderService {
 	@Autowired
 	private WebClient.Builder webClientBuilder;
 
+	@Autowired
 	private Tracer tracer;
 
 

@@ -22,19 +22,18 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class OrderController {
 
-	private static final String FALLBACK_MSG = "Oops! Something went wrong, please order after sometime";
-	private final OrderService orderService;
+    private final OrderService orderService;
 
-	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
-	@CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
-	@TimeLimiter(name = "inventory")
-	@Retry(name = "inventory")
-	public CompletableFuture<String> placeOrder(@RequestBody OrderRequest orderRequest) {
-		return CompletableFuture.supplyAsync(()-> orderService.placeOrder(orderRequest));
-	}
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    //@CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
+    @TimeLimiter(name = "inventory")
+    @Retry(name = "inventory")
+    public CompletableFuture<String> placeOrder(@RequestBody OrderRequest orderRequest) {
+        return CompletableFuture.supplyAsync(()-> orderService.placeOrder(orderRequest));
+    }
 
-	public CompletableFuture<String> fallback(OrderRequest orderRequest, RuntimeException runtimeException) {
-		return CompletableFuture.supplyAsync(() -> FALLBACK_MSG);
-	}
+//    public CompletableFuture<String> fallbackMethod(OrderRequest orderRequest, RuntimeException runtimeException){
+//        return CompletableFuture.supplyAsync(()-> "Oops! Something went wrong, please order after some time!");
+//    }
 }
