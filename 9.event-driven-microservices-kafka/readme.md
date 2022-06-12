@@ -11,7 +11,8 @@ Spring Boot Microservices
 7. ELK - see logs better
 8. RabbitMQ for event drive (planning for Kafka as well)
 
-![MySQL](https://user-images.githubusercontent.com/54174687/173219377-1e04d128-8ec2-4bde-af9f-1c990d58845e.jpg)
+![MySQL](https://user-images.githubusercontent.com/54174687/173241169-de43306a-8293-43ba-a105-665e3a6d90d4.jpg)
+
 
 # Eureka
 
