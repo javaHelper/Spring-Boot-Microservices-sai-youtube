@@ -24,3 +24,7 @@ Spring Boot Microservices
 `http://localhost:9411/`
 
 <img width="1512" alt="Screenshot 2022-06-12 at 11 38 52 AM" src="https://user-images.githubusercontent.com/54174687/173219422-30b9f453-53a0-4251-a9f5-febea376f09d.png">
+
+- Place the Order 
+
+<img width="1238" alt="Screenshot 2022-06-12 at 12 19 45 PM" src="https://user-images.githubusercontent.com/54174687/173221058-cfc6348d-71d9-4d27-9662-8c2563d081b2.png">
