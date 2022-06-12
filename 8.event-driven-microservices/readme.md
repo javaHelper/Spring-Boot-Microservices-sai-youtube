@@ -30,3 +30,6 @@ Spring Boot Microservices
 <img width="1238" alt="Screenshot 2022-06-12 at 12 19 45 PM" src="https://user-images.githubusercontent.com/54174687/173221058-cfc6348d-71d9-4d27-9662-8c2563d081b2.png">
 
 When the order will be placed, notification will be raised by sending it through RabbitMQ and Notification will be read by notification-service
+
+<img width="1365" alt="Screenshot 2022-06-12 at 12 24 26 PM" src="https://user-images.githubusercontent.com/54174687/173221206-e52bfdfb-87ac-4af0-a186-83bc2d328fff.png">
+
